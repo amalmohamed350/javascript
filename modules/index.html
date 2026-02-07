@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Math Operations Using Javascript Modules</h1>
+    <div id="result">Loading results.......</div>
+
+    <script type="module">
+       import {multiply , divide,substract} from './mathOperation.js';
+
+       const a=10, b=5
+
+       const multiplication= multiply(a,b)
+       const division = divide(a,b)
+       const subtraction = substract(a,b)
+
+       document.getElementById("result").innerHTML =`
+      <p>Multiply: ${a} * ${b} =${multiplication}</p>
+      <p>Divide: ${a} / ${b} = ${division}</p>
+      <p>Subtract:${a} - ${b}= ${subtraction} </p>
+
+      
+    </script>
+  </body>
+</html>
